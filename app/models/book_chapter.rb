@@ -30,7 +30,8 @@ class BookChapter < ActiveRecord::Base
     print "\n++++ Buscamos la pagina wiki\n"
     if project.wiki && !wiki_page_title.blank?
       print "\n++++ Buscamos la pagina wiki 2\n"+wiki_page_title
-      @wiki_page ||= project.wiki.find_page(wiki_page_title)
+      title = book.prefix.blank? ? wiki_page_title : book.prefix + wiki_page_title
+      @wiki_page ||= project.wiki.find_page(title)
     end
     print "\n++++ Buscamos la pagina wiki 3\n"+@wiki_page.to_s+"\n"
     @wiki_page

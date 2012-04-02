@@ -4,6 +4,8 @@ one:
 
   title: MyString
 
+  prefix: none
+
 two:
   id: 2
 

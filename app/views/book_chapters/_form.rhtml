@@ -2,13 +2,13 @@
 <div class="box">
 <!--[form:book_chapter]-->
 <p><label for="book_chapter_wiki_page_title"><%=l(:field_wiki_page_title)%> <span class="required">*</span></label>
-<p><%= text_field 'book_chapter', 'wiki_page_title'%></p>
+<span><%= Wiki.titleize(@book.prefix) %></span><%= text_field 'book_chapter', 'wiki_page_title'%>
 </p>
 <p><label for="book_chapter_order"><%=l(:field_order)%> <span class="required">*</span></label>
-<p><%= text_field 'book_chapter', 'order_float'%></p>
+<%= text_field 'book_chapter', 'order_float'%>
 </p>
 <p><label for="book_chapter_numbering"><%=l(:field_chapter_numbering)%> <span class="required">*</span></label>
-<p><%= text_field 'book_chapter', 'chapter_numbering'%></p>
+<%= text_field 'book_chapter', 'chapter_numbering'%>
 </p>
 <!--[eoform:book_chapter]-->
 </div>

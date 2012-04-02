@@ -33,6 +33,7 @@ class BookChaptersController < ApplicationController
   
   
   def edit
+    @book=@book_chapter.book
     if request.post? and @book_chapter.update_attributes(params[:book_chapter])
       flash[:notice] = l(:notice_successful_update)
       redirect_to :controller => 'books', :action => 'show', :id => @book_chapter.book
